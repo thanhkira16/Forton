@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Landingpage",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.70.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass src/scss:public",
+    "sass:dev": "sass --watch --embed-source-map src/scss:public/styles",
+    "sass:prod": "sass --no-source-map --style compressed src/scss:public/styles"
+  },
+  "author": "Thanhkira16",
+  "license": "ISC",
+  "keywords": []
+}
