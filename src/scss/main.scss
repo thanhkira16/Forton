@@ -1,6 +1,6 @@
 // main.scss
 @import '_base';
-
+@import '../components/header/header.scss';
 h1 {
     color: tomato;
     font-family: system-ui, -apple-system, Roboto, sans-serif;

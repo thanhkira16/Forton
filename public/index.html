@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/Forton/src/components/header/header.html">
 </head>
 
 <body>
     <div class="app">
-        <div class="navigation">
-            <div class="nav-left">
-                
-            </div>
-            <div class="nav-center"></div>
-            <div class="nav-right"></div>
-        </div>
+        <!-- Include header component here -->
+        <div class="header-placeholder"></div>
     </div>
+
+    <script>
+        // Function to inject component HTML into a placeholder
+        function injectComponent(componentUrl, placeholderSelector) {
+            fetch(componentUrl)
+                .then(response => response.text())
+                .then(html => {
+                    const placeholder = document.querySelector(placeholderSelector);
+                    placeholder.innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching component:', error));
+        }
+
+        // Inject header component
+        injectComponent('/Forton/src/components/header/header.html', '.header-placeholder');
+    </script>
 </body>
 
 </html>
