@@ -1,0 +1,7 @@
+header {
+  display: flex;
+  background-color: red;
+  h1 {
+    color: blue($color: #000000);
+  }
+}
