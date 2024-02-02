@@ -1,0 +1,59 @@
+/* Define the container for the grid */
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+
+  &.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    @media (min-width: 740px) {
+      margin: 0 -8px;
+    }
+  }
+
+  .col {
+    flex: 1;
+    padding: 0 4px;
+  }
+
+  .c-0 {
+    display: none;
+  }
+
+  @for $i from 1 through 12 {
+    .c-#{$i} {
+      flex: 0 0 percentage(8.33333 * $i);
+      max-width: percentage(8.33333 * $i);
+    }
+  }
+
+  /* Tablet  */
+  @media (min-width: 740px) and (max-width: 1023px) {
+    &.wide {
+      width: 644px;
+
+      .row {
+        margin: 0 -4px; // Adjusted from -8px to -4px
+      }
+    }
+  }
+
+  /* PC low resolution */
+  @media (min-width: 1024px) and (max-width: 1239px) {
+    &.wide {
+      width: 984px;
+
+      .row {
+        margin: 0 -12px;
+      }
+    }
+  }
+}
