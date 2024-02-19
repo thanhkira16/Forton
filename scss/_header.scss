@@ -3,6 +3,8 @@
 .header {
   position: absolute;
   z-index: 5;
+  background-color: $white-color; // Use background color variable
+  width: 100%;
   .header-bg {
     position: absolute;
     z-index: 4;
@@ -14,6 +16,7 @@
       width: 25%;
       width: 25vw;
     }
+
     .header-bg-left {
       position: absolute;
       left: 0;
@@ -22,6 +25,7 @@
       min-width: 1000px;
       width: 92vw;
     }
+
     .header-bg-right {
       position: absolute;
       left: -140px;
@@ -32,33 +36,31 @@
   }
 
   .navigation {
-    position: absolute;
+    padding: 0 50px;
+    position: relative; 
     z-index: 6;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: $nav-height;
     align-items: center;
+
     .nav-left {
       display: flex;
       justify-content: center;
       align-items: center;
-      .header-logo {
-        display: block;
-        padding: 20px 30px;
-      }
+      flex: 0 0 25%;
+      padding-right: 20rem;
     }
+
     .nav-center {
-      width: 50%;
-      // height: 100%;
+      flex: 0 1 50%;
       padding: 0 23px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-direction: row;
       list-style: none;
-      color: #58468c;
-      font-family: Poppins, sans-serif;
+      color: $purple-color;
       font-size: 1.6rem;
       letter-spacing: 0.085em;
       line-height: 23px;
@@ -66,75 +68,80 @@
       font-weight: 500;
       box-sizing: border-box;
 
+      .tablet-logo {
+        display: none;
+      }
+
       .nav-center-item {
         padding: 20px 30px;
       }
     }
+
     .nav-right {
-      width: 25%;
       display: flex;
-    }
-  }
-}
-
-//Mobile
-@media (max-width: 739px) {
-}
-//Tablet
-@media (min-width: 800px) and (max-width: 1024px) {
-  .header {
-    .navigation {
-      .nav-left {
-        .header-logo {
-          display: none;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 0 0 25%;
+      height: 100%;
+      .nav-right-content{
+        width: 200px;
+        display: flex;
+        padding-left: 0;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        .shopping-cart, .search-btn, .modal-btn{
+          height: 100%;
+          line-height: 100%;
+          color: $purple-color;
+          
         }
-      }
-    }
-  }
-}
-
-//Tablet and Mobile
-@media (min-width: 48em) and (max-width: 80em) {
-  .header {
-    .navigation {
-      .nav-left {
-        display: none;
-      }
-      .nav-right{
-        display: none;
-      }
-      .nav-center {
-        width: 100%;
-        margin-top: 3 * $nav-height;
-        align-items: flex-start;
-        flex-direction: column;
-        .tablet-logo {
-          width: 100%;
+        .shopping-cart {
           position: relative;
-          padding: 0 23px;
-          .menu-toggle {
-            position: absolute;
-            float: left;
-            width: 40px;
-            font-size: 3.4rem;
-            display: block;
+          
+          .shopping-cart-icon {
+            font-size: 4rem;
+            position: relative;
+            .shopping-cart-badge {
+              top: -9px;
+              right: -16px;
+              position: absolute;
+              width: 25px;
+              text-align: center;
+              height: 25px;
+              border-radius: 50%;
+              background-color: #ff8a73;
+              font-size: 2rem;
+              display: block;
+              line-height: 25px;
+              color: #f0f0f0;
+            }
           }
-
-          .img-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+         
+        }
+        .search-btn {
+          .search-btn-icon {
+            display: block;
+            font-size: 4rem;
+          }
+        }
+        .modal-btn {
+          background-color: $purple-color;
+          width: 50px;
+          height: 50px;
+          border-radius: 4px;
+          text-align: center;
+          .modal-btn-icon {
+            display: block;
+            font-size: 3rem;
+            line-height: 50px;
+            color: $white-color;
           }
         }
       }
+    
     }
   }
 }
-//PC
-@media only screen and (min-width: 81em) {
-  .header {
-    .navigation {
-    }
-  }
-}
+
+//Media queries...
