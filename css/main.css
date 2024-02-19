@@ -337,47 +337,55 @@ body {
 }
 .banner .banner-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 15rem;
+  left: 20rem;
   width: 100%;
-  height: 100%;
+  height: 75%;
   background-size: cover;
   background-position: center;
 }
 .banner .banner-bg .banner-bg-img {
   position: absolute;
 }
-.banner .banner-bg .bg-img-item-coin {
-  top: 17rem;
-  right: 70rem;
+.banner .banner-bg img:nth-child(1) {
+  /* Styles for the first image */
+  top: 10%;
+  right: 30%;
 }
-.banner .banner-bg .bg-img-item-laptop {
-  bottom: 20rem;
-  left: 50rem;
+.banner .banner-bg img:nth-child(2) {
+  /* Styles for the second image */
+  bottom: 5%;
+  left: 15%;
 }
-.banner .banner-bg .bg-img-item-main {
-  top: 20rem;
-  left: 20rem;
+.banner .banner-bg img:nth-child(3) {
+  /* Styles for the third image */
+  top: 15%;
+  left: -5%;
 }
-.banner .banner-bg .bg-img-item-msg {
-  top: 12rem;
-  left: 110rem;
+.banner .banner-bg img:nth-child(4) {
+  /* Styles for the fourth image */
+  top: -10%;
+  left: 40%;
 }
-.banner .banner-bg .bg-img-item-protect {
-  bottom: 27rem;
-  right: 50rem;
+.banner .banner-bg img:nth-child(5) {
+  /* Styles for the fifth image */
+  bottom: 10%;
+  right: 30%;
 }
-.banner .banner-bg .bg-img-item-user {
-  right: 30rem;
-  top: 40rem;
+.banner .banner-bg img:nth-child(6) {
+  /* Styles for the sixth image */
+  right: 20%;
+  top: 30%;
 }
-.banner .banner-bg .bg-img-item-wallet {
-  bottom: 10rem;
-  right: 105rem;
+.banner .banner-bg img:nth-child(7) {
+  /* Styles for the seventh image */
+  bottom: -10%;
+  right: 55%;
 }
-.banner .banner-bg .bg-img-item-wifi {
-  top: 17rem;
-  left: 70rem;
+.banner .banner-bg img:nth-child(8) {
+  /* Styles for the eighth image */
+  top: 0%;
+  left: 20%;
 }
 .banner .banner-content {
   position: absolute;
