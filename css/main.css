@@ -168,7 +168,6 @@ body {
   left: 0;
   top: 0;
   z-index: 3;
-  width: 25%;
   width: 25vw;
 }
 .header .header-bg .header-bg-left {
@@ -213,14 +212,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-  padding-right: 20rem;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
 }
 .header .navigation .nav-center {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
   padding: 0 23px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,8 +256,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   height: 100%;
 }
 .header .navigation .nav-right .nav-right-content {
@@ -276,7 +274,9 @@ body {
           align-items: center;
   list-style: none;
 }
-.header .navigation .nav-right .nav-right-content .shopping-cart, .header .navigation .nav-right .nav-right-content .search-btn, .header .navigation .nav-right .nav-right-content .modal-btn {
+.header .navigation .nav-right .nav-right-content .shopping-cart,
+.header .navigation .nav-right .nav-right-content .search-btn,
+.header .navigation .nav-right .nav-right-content .modal-btn {
   height: 100%;
   line-height: 100%;
   color: #58468c;
@@ -320,6 +320,49 @@ body {
   color: #f0f0f0;
 }
 
+@media (min-width: 800px) and (max-width: 1024px) {
+  .header .navigation .nav-left .header-logo {
+    display: none;
+  }
+}
+@media (min-width: 48em) and (max-width: 80em) {
+  .header .navigation .nav-left {
+    display: none;
+  }
+  .header .navigation .nav-right {
+    display: none;
+  }
+  .header .navigation .nav-center {
+    width: 100%;
+    margin-top: 360px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .navigation .nav-center .tablet-logo {
+    width: 100%;
+    position: relative;
+    padding: 0 23px;
+  }
+  .header .navigation .nav-center .tablet-logo .menu-toggle {
+    position: absolute;
+    float: left;
+    width: 40px;
+    font-size: 3.4rem;
+    display: block;
+  }
+  .header .navigation .nav-center .tablet-logo .img-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
 .banner {
   position: absolute;
   z-index: 10;
@@ -334,18 +377,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 .banner .banner-bg {
   position: absolute;
-  top: 15rem;
-  left: 20rem;
-  width: 100%;
+  top: 15%;
+  left: 25%;
+  width: 87%;
   height: 75%;
   background-size: cover;
   background-position: center;
 }
 .banner .banner-bg .banner-bg-img {
   position: absolute;
+}
+.banner .banner-bg img:not(:nth-child(3)) {
+  width: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banner .banner-bg img:nth-child(1) {
   /* Styles for the first image */
@@ -358,8 +407,8 @@ body {
   left: 15%;
 }
 .banner .banner-bg img:nth-child(3) {
-  /* Styles for the third image */
   top: 15%;
+  width: 350px;
   left: -5%;
 }
 .banner .banner-bg img:nth-child(4) {
@@ -383,7 +432,7 @@ body {
   right: 55%;
 }
 .banner .banner-bg img:nth-child(8) {
-  /* Styles for the eighth image */
+  /* Styles for the eight h image */
   top: 0%;
   left: 20%;
 }
@@ -391,9 +440,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 60rem;
+  -webkit-transform: translate(-70%, -60%);
+          transform: translate(-70%, -60%);
   text-align: center;
   color: #333; /* Example text color */
   padding: 20px;
@@ -402,12 +451,13 @@ body {
   white-space: nowrap;
 }
 .banner .banner-content .banner-title {
-  font-size: 10rem;
+  font-size: 7rem;
   color: #58468c;
   font-weight: 100;
+  padding: 0 20px;
 }
 .banner .banner-content .banner-desc {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 5rem;
   margin-bottom: 20px;
   color: #716C80;
@@ -415,7 +465,7 @@ body {
 }
 .banner .banner-content .btn-readmore,
 .banner .banner-content .btn-contact {
-  padding: 3rem 6rem;
+  padding: 1rem 2rem;
   border-radius: 4rem;
   font-size: 2rem;
 }
@@ -438,4 +488,11 @@ body {
 .banner .btn:hover {
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768x) and (max-width: 1024px) {
+  .banner .banner-bg {
+    top: 0;
+    left: 0;
+  }
 }

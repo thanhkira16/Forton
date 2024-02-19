@@ -1,7 +1,7 @@
 @import "_var";
 @import "_grid";
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 * {
   box-sizing: border-box;
 }
@@ -9,7 +9,7 @@ html {
   font-size: 62.5%;
   /* set 1rem = 10 px  */
   line-height: 1.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 body {
@@ -29,3 +29,4 @@ body {
 
 @import "_header";
 @import "_banner";
+@import "_responsive.scss";

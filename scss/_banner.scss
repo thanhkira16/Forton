@@ -6,12 +6,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   .banner-bg {
     position: absolute;
-    top: 15rem;
-    left: 20rem;
+    top: 15%;
+    left: 25%;
     // min-width: 1650px;
-    width: 100%;
+    width: 87%;
     height: 75%;
     background-size: cover;
     background-position: center;
@@ -69,6 +70,10 @@
     // }
 
     img {
+      &:not(:nth-child(3)) {
+        width: 80px;
+        object-fit: contain;
+      }
       &:nth-child(1) {
         /* Styles for the first image */
         top: 10%;
@@ -82,8 +87,8 @@
       }
 
       &:nth-child(3) {
-        /* Styles for the third image */
         top: 15%;
+        width: 350px;
         left: -5%;
       }
 
@@ -112,7 +117,7 @@
       }
 
       &:nth-child(8) {
-        /* Styles for the eighth image */
+        /* Styles for the eight h image */
         top: 0%;
         left: 20%;
       }
@@ -123,8 +128,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100rem;
-    transform: translate(-50%, -50%);
+    width: 60rem;
+    transform: translate(-70%, -60%);
     text-align: center;
     color: #333; /* Example text color */
     padding: 20px;
@@ -132,13 +137,14 @@
     max-width: 80%; /* Adjust maximum width as needed */
     white-space: nowrap;
     .banner-title {
-      font-size: 10rem;
+      font-size: 7rem;
       color: $purple-color;
       font-weight: 100;
+      padding: 0 20px;
     }
 
     .banner-desc {
-      font-size: 3rem;
+      font-size: 2rem;
       line-height: 5rem;
       margin-bottom: 20px;
       color: $light-color;
@@ -147,7 +153,7 @@
     }
     .btn-readmore,
     .btn-contact {
-      padding: 3rem 6rem;
+      padding: 1rem 2rem;
       border-radius: 4rem;
       font-size: 2rem;
     }
@@ -174,5 +180,15 @@
 
   .btn:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+//Tablet
+@media (min-width: 768x) and (max-width: 1024px) {
+  .banner {
+    .banner-bg {
+      top: 0;
+      left: 0;
+    }
   }
 }

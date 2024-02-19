@@ -13,7 +13,7 @@
       left: 0;
       top: 0;
       z-index: 3;
-      width: 25%;
+      // width: 25%;
       width: 25vw;
     }
 
@@ -37,7 +37,7 @@
 
   .navigation {
     padding: 0 50px;
-    position: relative; 
+    position: relative;
     z-index: 6;
     display: flex;
     justify-content: space-between;
@@ -49,12 +49,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex: 0 0 25%;
-      padding-right: 20rem;
+      flex: 0 0 20%;
+      // padding-right: 20rem;
     }
 
     .nav-center {
-      flex: 0 1 50%;
+      flex: 0 1 60%;
       padding: 0 23px;
       display: flex;
       justify-content: space-between;
@@ -81,24 +81,25 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      flex: 0 0 25%;
+      flex: 0 0 20%;
       height: 100%;
-      .nav-right-content{
+      .nav-right-content {
         width: 200px;
         display: flex;
         padding-left: 0;
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        .shopping-cart, .search-btn, .modal-btn{
+        .shopping-cart,
+        .search-btn,
+        .modal-btn {
           height: 100%;
           line-height: 100%;
           color: $purple-color;
-          
         }
         .shopping-cart {
           position: relative;
-          
+
           .shopping-cart-icon {
             font-size: 4rem;
             position: relative;
@@ -117,7 +118,6 @@
               color: #f0f0f0;
             }
           }
-         
         }
         .search-btn {
           .search-btn-icon {
@@ -139,9 +139,69 @@
           }
         }
       }
-    
     }
   }
 }
 
 //Media queries...
+//Mobile
+@media (max-width: 739px) {
+}
+//Tablet
+@media (min-width: 800px) and (max-width: 1024px) {
+  .header {
+    .navigation {
+      .nav-left {
+        .header-logo {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//Tablet and Mobile
+@media (min-width: 48em) and (max-width: 80em) {
+  .header {
+    .navigation {
+      .nav-left {
+        display: none;
+      }
+      .nav-right {
+        display: none;
+      }
+      .nav-center {
+        width: 100%;
+        margin-top: 3 * $nav-height;
+        align-items: flex-start;
+        flex-direction: column;
+        .tablet-logo {
+          width: 100%;
+          position: relative;
+          padding: 0 23px;
+          .menu-toggle {
+            position: absolute;
+            float: left;
+            width: 40px;
+            font-size: 3.4rem;
+            display: block;
+          }
+
+          .img-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+//PC
+@media only screen and (min-width: 81em) {
+  .header {
+    .navigation {
+    }
+  }
+}
