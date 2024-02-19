@@ -10,125 +10,130 @@
   .banner-bg {
     position: absolute;
     top: 15%;
-    left: 25%;
-    // min-width: 1650px;
-    width: 87%;
+    left: 5%;
+    min-width: 1250px;
+    // width: 87%;
     height: 75%;
     background-size: cover;
     background-position: center;
     .banner-bg-img {
       position: absolute;
     }
-    // img {
-    //   &:nth-child(1) {
-    //     /* Styles for the first image */
-    //     top: 20px;
-    //     right: 300px;
-    //   }
-
-    //   &:nth-child(2) {
-    //     /* Styles for the second image */
-    //     bottom: 20px;
-    //     left: 200px;
-    //   }
-
-    //   &:nth-child(3) {
-    //     /* Styles for the third image */
-    //     top: 20px;
-    //     left: 0px;
-    //   }
-
-    //   &:nth-child(4) {
-    //     /* Styles for the fourth image */
-    //     top: -50px;
-    //     left: 800px;
-    //   }
-
-    //   &:nth-child(5) {
-    //     /* Styles for the fifth image */
-    //     bottom: 27px;
-    //     right: 50px;
-    //   }
-
-    //   &:nth-child(6) {
-    //     /* Styles for the sixth image */
-    //     right: 0px;
-    //     top: 200px;
-    //   }
-
-    //   &:nth-child(7) {
-    //     /* Styles for the seventh image */
-    //     bottom: -40px;
-    //     right: 600px;
-    //   }
-
-    //   &:nth-child(8) {
-    //     /* Styles for the eighth image */
-    //     top: 17px;
-    //     left: 500px;
-    //   }
-    // }
-
     img {
       &:not(:nth-child(3)) {
         width: 80px;
-        object-fit: contain;
       }
+
       &:nth-child(1) {
         /* Styles for the first image */
-        top: 10%;
-        right: 30%;
+        top: 20px;
+        right: 300px;
       }
 
       &:nth-child(2) {
         /* Styles for the second image */
-        bottom: 5%;
-        left: 15%;
+        bottom: 20px;
+        left: 200px;
       }
 
       &:nth-child(3) {
-        top: 15%;
+        /* Styles for the third image */
+        top: 20px;
+        left: 0px;
         width: 350px;
-        left: -5%;
       }
 
       &:nth-child(4) {
         /* Styles for the fourth image */
-        top: -10%;
-        left: 40%;
+        top: -50px;
+        left: 800px;
       }
 
       &:nth-child(5) {
         /* Styles for the fifth image */
-        bottom: 10%;
-        right: 30%;
+        bottom: 27px;
+        right: 50px;
       }
 
       &:nth-child(6) {
         /* Styles for the sixth image */
-        right: 20%;
-        top: 30%;
+        right: 0px;
+        top: 200px;
       }
 
       &:nth-child(7) {
         /* Styles for the seventh image */
-        bottom: -10%;
-        right: 55%;
+        bottom: -40px;
+        right: 600px;
       }
 
       &:nth-child(8) {
-        /* Styles for the eight h image */
-        top: 0%;
-        left: 20%;
+        /* Styles for the eighth image */
+        top: 17px;
+        left: 500px;
       }
     }
+
+    // img {
+    //   &:not(:nth-child(3)) {
+    //     width: 80px;
+    //     object-fit: contain;
+    //   }
+    //   &:nth-child(1) {
+    //     /* Styles for the first image */
+    //     top: 10%;
+    //     right: 30%;
+    //   }
+
+    //   &:nth-child(2) {
+    //     /* Styles for the second image */
+    //     bottom: 5%;
+    //     left: 15%;
+    //   }
+
+    //   &:nth-child(3) {
+    //     top: 15%;
+    //     width: 350px;
+    //     left: -5%;
+    //   }
+
+    //   &:nth-child(4) {
+    //     /* Styles for the fourth image */
+    //     top: -10%;
+    //     left: 40%;
+    //   }
+
+    //   &:nth-child(5) {
+    //     /* Styles for the fifth image */
+    //     bottom: 10%;
+    //     right: 30%;
+    //   }
+
+    //   &:nth-child(6) {
+    //     /* Styles for the sixth image */
+    //     right: 20%;
+    //     top: 30%;
+    //   }
+
+    //   &:nth-child(7) {
+    //     /* Styles for the seventh image */
+    //     bottom: -10%;
+    //     right: 55%;
+    //   }
+
+    //   &:nth-child(8) {
+    //     /* Styles for the eight h image */
+    //     top: 0%;
+    //     left: 20%;
+    //   }
+    // }
   }
 
   .banner-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 60rem;
+    left: 65%;
+    width: 600px;
     transform: translate(-70%, -60%);
     text-align: center;
     color: #333; /* Example text color */
@@ -184,11 +189,20 @@
 }
 
 //Tablet
-@media (min-width: 768x) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .banner {
     .banner-bg {
-      top: 0;
-      left: 0;
+      top: 5rem;
+      left: -15rem;
+    }
+  }
+}
+
+@media (min-width: 1037px) and (max-width: 1200px) {
+  .banner {
+    .banner-bg {
+      top: 10rem;
+      left: -10rem;
     }
   }
 }
