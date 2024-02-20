@@ -27,26 +27,26 @@
       &:nth-child(1) {
         /* Styles for the first image */
         top: 20px;
-        right: 300px;
+        right: 200px;
       }
 
       &:nth-child(2) {
         /* Styles for the second image */
         bottom: 20px;
-        left: 200px;
+        left: 300px;
       }
 
       &:nth-child(3) {
         /* Styles for the third image */
         top: 20px;
-        left: 0px;
+        left: 30px;
         width: 350px;
       }
 
       &:nth-child(4) {
         /* Styles for the fourth image */
         top: -50px;
-        left: 800px;
+        left: 700px;
       }
 
       &:nth-child(5) {
@@ -64,7 +64,7 @@
       &:nth-child(7) {
         /* Styles for the seventh image */
         bottom: -40px;
-        right: 600px;
+        right: 500px;
       }
 
       &:nth-child(8) {
@@ -156,17 +156,23 @@
 
       margin-bottom: 5rem;
     }
-    .btn-readmore,
-    .btn-contact {
-      padding: 1rem 2rem;
-      border-radius: 4rem;
-      font-size: 2rem;
-    }
 
-    .btn-readmore {
-      background-color: $orange-color;
-    }
-    .btn-contact {
+    .banner-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn-readmore,
+      .btn-contact {
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        font-size: 2rem;
+      }
+
+      .btn-readmore {
+        background-color: $orange-color;
+      }
+      .btn-contact {
+      }
     }
   }
 
@@ -198,11 +204,87 @@
   }
 }
 
-@media (min-width: 1037px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .banner {
     .banner-bg {
-      top: 10rem;
+      min-width: calc(1250px - 20%);
+      top: 7rem;
       left: -10rem;
+      img {
+        &:not(:nth-child(3)) {
+          width: 80px;
+        }
+
+        &:nth-child(1) {
+          /* Styles for the first image */
+          top: 20px;
+          right: 100px;
+        }
+
+        &:nth-child(2) {
+          /* Styles for the second image */
+          bottom: 20px;
+          left: 400px;
+        }
+
+        &:nth-child(3) {
+          /* Styles for the third image */
+          top: 20px;
+          left: 30px;
+          width: 350px;
+        }
+
+        &:nth-child(4) {
+          /* Styles for the fourth image */
+          top: -50px;
+          left: 700px;
+        }
+
+        &:nth-child(5) {
+          /* Styles for the fifth image */
+          bottom: 27px;
+          right: 50px;
+        }
+
+        &:nth-child(6) {
+          /* Styles for the sixth image */
+          right: 0px;
+          top: 200px;
+        }
+
+        &:nth-child(7) {
+          /* Styles for the seventh image */
+          bottom: -40px;
+          right: 300px;
+        }
+
+        &:nth-child(8) {
+          /* Styles for the eighth image */
+          top: 17px;
+          left: 500px;
+        }
+      }
+    }
+
+    .banner-content {
+      width: calc(600px - 20%);
+      top: 50%;
+      left: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-self: center;
+      align-items: center;
+      .banner-title {
+        margin-top: 70px;
+        padding: 0 40px;
+      }
+      .banner-btn {
+        padding: 0 15rem;
+      }
+      .banner-desc {
+        width: 20rem;
+        padding: 0 50px;
+      }
     }
   }
 }
